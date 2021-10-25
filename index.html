@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget App</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- # app container -->
+  <div class="container-fluid bg-dark w-50 mt-5 pt-4 pl-3 budget-container">
+    <div class="container-header mb-4">
+      <div class="row">
+        <div class="col header-text pl-4">
+          Budget App
+        </div>
+        <div class="col text-right"><img src="img/button.png" alt="" width="30"></div>
+      </div>
+    </div>
+    <!-- # app dashboard -->
+    <div class="container monitor-exp mb-4 h-50 p-3 ml-2">
+      <div class="amt balance">
+        <h6>Balance</h6>
+        <h1 class="value" id="color"><small></small>0</h1>
+      </div>
+    </div>
+    <!-- # income and expense container -->
+    <div class="container overview mb-5 br-2 text-white p-3">
+      <div class="row">
+        <!-- income -->
+        <div class="col-md-3 debit p-4 br-2 text-center">
+          <h6>Income</h6>
+          <p class="income-total small">6,423.45</p>
+        </div>
+
+        <!-- chart -->
+        <div class="chart col-md-4 ml-4 text-center"></div>
+
+        <!-- # expense -->
+        <div class="col-md-3 debit br-2 p-4 text-center">
+          <h6>Debit</h6>
+          <p class="outcome-total small">$500</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="customvtab container lists mb-1 text-white">
+      <ul class="nav nav-tabs toggle" role="tablist">
+        <li class="nav-item tab1">
+          <a class="nav-link active " data-toggle="tab" href="#income" role="tab" aria-selected="true">
+            <span class="hidden-xs-down">Income</span>
+          </a>
+        </li>
+        <li class="nav-item tab2">
+          <a class="nav-link" data-toggle="tab" href="#expense" role="tab" aria-selected="false">
+            <span class="hidden-xs-down">Expenses</span>
+          </a>
+        </li>
+        <li class="nav-item tab3">
+          <a class="nav-link" data-toggle="tab" href="#all" role="tab" aria-selected="false">
+            <span class="hidden-xs-down">Transactions</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- income pane -->
+        <div class="tab-pane hide active p-20" id="income" role="tabpanel">
+          <ul class="list mb-4">
+          </ul>
+          <div class="container input py-2 ">
+            <input type="text" class="col-md-6 p-1" id="income-title-input" name="title" placeholder="Item">
+            <input type="number" class="col-md-4 p-1" id="income-amount-input" name="amount" placeholder="$0">
+            <button class="add-income btn btn-success btn-md"><span><i class="fa fa-plus"></i></span></button>
+          </div>
+        </div>
+
+        <!-- expense -->
+        <div class="tab-pane hide p-20" id="expense" role="tabpanel">
+          <ul class="list mb-4">
+          </ul>
+          <div class="container input py-2">
+            <input type="text" class="col-md-6 p-1" id="expense-title-input" name="title" placeholder="Item title">
+            <input type="number" class="col-md-4 p-1" id="expense-amount-input" name="amount" placeholder="$0">
+            <button class="add-expense btn btn-danger btn-md"><span><i class="fa fa-plus"></i></span></button>
+          </div>
+        </div>
+
+        <!-- all -->
+        <div class="tab-pane p-20" id="all" role="tabpanel">
+          <ul class="list mb-4">
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end budget container -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
